@@ -6,12 +6,13 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/26 15:45:56 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/08/27 22:55:49 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+// exception objects are passed by reference as 'e'
 int main(void)
 {
 	try {
@@ -20,7 +21,7 @@ int main(void)
 			andy.decrementGrade();
 	}
 	catch (std::exception & e) {
-			std::cout << "andy" << e.what() << std::endl;
+			std::cout << "test 1 - " << e.what() << std::endl;
 	}
 	try {
 			Bureaucrat andy ("andy", 1);
@@ -30,7 +31,7 @@ int main(void)
 			std::cout << andy.getName() << std::endl;
 	}
 	catch (std::exception & e) {
-			std::cout << "andy" << e.what() << std::endl;
+			std::cout << "test 2 - " << e.what() << std::endl;
 	}
 	try {
 			Bureaucrat andy ("andy", 42);
@@ -40,7 +41,7 @@ int main(void)
 			std::cout << andy.getName() << std::endl;
 	}
 	catch (std::exception & e) {
-			std::cout << "andy" << e.what() << std::endl;
+			std::cout << "test 3 - " << e.what() << std::endl;
 	}
 	try {
 			Bureaucrat andy ("andy", 420);
@@ -48,7 +49,7 @@ int main(void)
 	}
 	catch (std::exception & e) {
 			std::cout << "andy not created" << std::endl;
-			std::cout << "andy" << e.what() << std::endl;
+			std::cout << "test 4 - " << e.what() << std::endl;
 	}
 	return (0);
 }

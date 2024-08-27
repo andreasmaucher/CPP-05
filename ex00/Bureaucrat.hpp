@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/26 14:50:20 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:49:28 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,13 @@ class Bureaucrat
 		// Destructor
 		~Bureaucrat(void);
 
-		private:
+	private:
 		std::string const	_name;
 		unsigned int		_grade;
 
 		// Copy assignment operator
 		// in this case private because of _name
 		Bureaucrat& operator=(const Bureaucrat &other);
-		//! Why?
 		Bureaucrat(void);
 };
 

@@ -6,7 +6,7 @@
 #    By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#              #
-#    Updated: 2024/06/24 16:19:07 by amaucher         ###   ########.fr        #
+#    Updated: 2024/08/27 22:53:55 by amaucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXLAGS) $(OBJS) -o $(NAME)
 
-#rule for building .o files from .cpp files
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
