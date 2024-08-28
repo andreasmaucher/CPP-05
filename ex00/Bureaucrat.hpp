@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/26 15:49:28 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:51:50 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ class Bureaucrat
 		std::string const	_name;
 		unsigned int		_grade;
 
-		// Copy assignment operator
-		// in this case private because of _name
+		// Copy assignment operator < private & undefined > to prevent reassignment,
+		// since _name is defined as 'const' and unchangeable; this way _name is immutable
 		Bureaucrat& operator=(const Bureaucrat &other);
 		Bureaucrat(void);
 };
