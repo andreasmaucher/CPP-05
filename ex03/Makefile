@@ -6,13 +6,13 @@
 #    By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#              #
-#    Updated: 2024/08/29 15:04:13 by amaucher         ###   ########.fr        #
+#    Updated: 2024/09/03 16:45:48 by amaucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = form
 SOURCES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
-			RobotomyRequestForm.cpp ShrubberyCreationForm.cpp \
+			RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp \
 		
 OBJS = $(SOURCES:.cpp=.o)
 
