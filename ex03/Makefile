@@ -6,11 +6,11 @@
 #    By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#              #
-#    Updated: 2024/09/03 16:45:48 by amaucher         ###   ########.fr        #
+#    Updated: 2024/09/03 18:11:40 by amaucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = form
+NAME = intern
 SOURCES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
 			RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp \
 		
