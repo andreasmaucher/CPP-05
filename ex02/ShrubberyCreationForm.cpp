@@ -28,18 +28,19 @@ std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i)
 	return o;
 }
 
-//!
 // Method to write ascii code
 void ShrubberyCreationForm::action() const {
 	std::ofstream outfile((this->_target + "_shrubbery").c_str());
-	outfile << "      %%%,%%%%%%%" << std::endl;
-	outfile << "       ,'%% \\-*%%%%%%%" << std::endl;
-    outfile << " ;%%%%%*%   _%%%%" << std::endl;
-    outfile << "  ,%%%       \\(_.*%%%%." << std::endl;
-    outfile << "  % *%%, ,%%%%*(    '" << std::endl;
-    outfile << "%^     ,*%%% )\\|,%%*%,_" << std::endl;
-    outfile << "     *%    \\/ #).-\"*%%*" << std::endl;
-    outfile << "         _.) ,/ *%," << std::endl;
-    outfile << "  _________)#(_____________" << std::endl;
+	outfile << "         ccee88oo" << std::endl;
+	outfile << "  C8O8O8Q8PoOb o8oo" << std::endl;
+    outfile << " dOB69QO8PdUOpugoO9bD" << std::endl;
+    outfile << "CgggbU8OU qOp qOdoUOdcb" << std::endl;
+    outfile << "    6OuU  /p u gcoUodpP" << std::endl;
+    outfile << "      \\\\//  /douUP" << std::endl;
+    outfile << "        \\\\////" << std::endl;
+    outfile << "         |||/\\" << std::endl;
+    outfile << "         |||\\/" << std::endl;
+    outfile << "         |||||" << std::endl;
+    outfile << "   .....//||||\\...." << std::endl;
 	outfile.close();
 }

@@ -2,7 +2,7 @@
 
 // Constructor
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : 
-	AForm("PresidentialPardonForm", 72, 45), _target(target) {}
+	AForm("RobotomyRequestForm", 72, 45), _target(target) {}
 
 // Destructor
 RobotomyRequestForm::~RobotomyRequestForm(void) {}
