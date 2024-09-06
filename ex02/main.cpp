@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/09/05 18:22:04 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/09/06 17:27:25 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,6 @@ int main(void)
 	mautForm = new PresidentialPardonForm("test");
 	try {
 		Bureaucrat scheuer("scheuer", 1);
-		bureaucrat.getGrade() <= this->_gradeSign
-		
 		std::cout << scheuer << std::endl;
 		std::cout << *mautForm << std::endl;
 		/* mautForm->beSigned(scheuer);
