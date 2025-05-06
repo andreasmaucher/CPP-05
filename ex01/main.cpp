@@ -43,7 +43,6 @@ int main(void)
 	try {
 			Bureaucrat scheuer("Scheuer", 6); // (name, grade)
 			Form maut("maut", 1, 4); // 1 triggers exception, needs to be >= 6
-			std::cout << maut << std::endl; // calling operator overload, to proof form not signed
 			scheuer.signForm(maut);
 			maut.beSigned(scheuer);
 	}

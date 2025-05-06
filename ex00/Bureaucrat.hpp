@@ -14,12 +14,15 @@
 
 # define BUREAUCRAT_HPP
 
+// needed because overload operator "<<" is used
 #include <iostream>
 
 class Bureaucrat
 {	
 	public:
 		// Exceptions
+		// virtual ensures that the correct version of what() is called based
+		// on the actual type of the exception (instead of default std::exception message)
 		class GradeTooHighException : public std::exception {
 			public:
 					virtual const char *what() const throw();
@@ -29,11 +32,12 @@ class Bureaucrat
 					virtual const char *what() const throw();
 		};
 
-		// getters & setters
+		// getters & setters (const as it will not modify the objects state)
 		std::string getName() const;
 		int getGrade() const;
 
-		// increment / decrement
+		// Two member functions
+		// increment / decrement (not const because they modify the object)
 		void incrementGrade() throw(GradeTooHighException);
 		void decrementGrade() throw(GradeTooLowException);
 		
@@ -45,8 +49,8 @@ class Bureaucrat
 		~Bureaucrat(void);
 
 	private:
-		std::string const	_name;
-		unsigned int		_grade;
+		std::string const	_name; // constant name
+		unsigned int		_grade; // grade that ranges from 1 to 150
 
 		// Copy assignment operator < private & undefined > to prevent reassignment,
 		// since _name is defined as 'const' and unchangeable; this way _name is immutable
@@ -54,6 +58,9 @@ class Bureaucrat
 		Bureaucrat(void);
 };
 
+/*
+Overload operators allow to use standard operators (+, -, <<, >>) with my own types
+*/
 std::ostream &		operator<<(std::ostream & o, Bureaucrat const & i);
 
 #endif

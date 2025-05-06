@@ -20,6 +20,7 @@ int main(void)
 			// code that could throw an exception
 			Bureaucrat andy ("andy", 150);
 			std::cout << "andy created" << std::endl;
+			std::cout << andy << std::endl;
 			andy.decrementGrade(); // error: decrement to 151
 	}
 	catch (std::exception & e) {
@@ -28,6 +29,7 @@ int main(void)
 	try {
 			Bureaucrat andy ("andy", 1);
 			std::cout << "andy created" << std::endl;
+			std::cout << andy << std::endl;
 			andy.incrementGrade(); // control flow immediately jumps to the corresponding catch block
 			std::cout << "Grade: " << andy.getGrade() << std::endl; // skipped in exception case
 			std::cout << "Name: " << andy.getName() << std::endl; // skipped in exception case
@@ -38,7 +40,10 @@ int main(void)
 	try {
 			Bureaucrat andy ("andy", 42);
 			std::cout << "andy created" << std::endl;
+			std::cout << andy << std::endl;
 			andy.incrementGrade();
+			std::cout << "after successfull increment" << std::endl;
+			std::cout << andy << std::endl;
 			std::cout << "Grade: " << andy.getGrade() << std::endl;
 			std::cout << "Name: " << andy.getName() << std::endl;
 	}
@@ -48,6 +53,7 @@ int main(void)
 	try {
 			Bureaucrat andy ("andy", 420);
 			std::cout << "andy created" << std::endl; // skipped, exception
+			std::cout << andy << std::endl;
 	}
 	catch (std::exception & e) {
 			std::cout << "andy not created" << std::endl;

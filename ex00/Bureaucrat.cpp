@@ -67,7 +67,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &others)
 		{
 			// no functionality, function can not be called since it's private
 			// best practice would be to but copy assignment operator '= delete' in .hpp, but
-			// not sure if allowed by the subject
+			// not allowed until C++11
 		}
 	return (*this);
 }
@@ -80,6 +80,6 @@ Bureaucrat::~Bureaucrat(void) {}
 // o -> output stream; i -> const reference to Bureaucrat object
 std::ostream &operator<<(std::ostream &o, Bureaucrat const &i)
 {
-	o << i.getName() << " bureaucrat grade " << i.getGrade() << ".";
+	o << i.getName() << ", bureaucrat grade " << i.getGrade() << ".";
 	return (o);
 }

@@ -47,7 +47,8 @@ class AForm
 		// public method
 		void		beSigned(Bureaucrat& b) throw (GradeTooLowException);
 		void		execute(Bureaucrat const & executor) const throw (GradeTooLowException, NotSignedException);
-		virtual void action() const = 0;
+		virtual void action() const = 0; // this is a purely virtual function as signalled by ""= 0"
+		// any class that inherits from AForm must implement this function!
 
 	private:
 		const std::string		_name;

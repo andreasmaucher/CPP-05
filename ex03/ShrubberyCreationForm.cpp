@@ -16,7 +16,10 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 {
 	if (this != &others)
 	{
-		this->_target = others._target;
+		//this->_target = others._target;
+		// no functionality, function can not be called since it's private
+		// best practice would be to but copy assignment operator '= delete' in .hpp, but
+		// not allowed until C++11
 	}
 	return *this;
 }
@@ -31,6 +34,9 @@ std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i)
 // Method to write ascii code
 void ShrubberyCreationForm::action() const {
 	std::ofstream outfile((this->_target + "_shrubbery").c_str());
+	if (!outfile.is_open()) {
+        throw std::runtime_error("Could not open file for writing");
+    }
 	outfile << "         ccee88oo" << std::endl;
 	outfile << "  C8O8O8Q8PoOb o8oo" << std::endl;
     outfile << " dOB69QO8PdUOpugoO9bD" << std::endl;

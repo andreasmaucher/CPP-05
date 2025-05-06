@@ -16,6 +16,7 @@
 
 #include <iostream>
 
+// forward declaration
 class Bureaucrat;
 
 class Form
@@ -48,11 +49,13 @@ class Form
 		void		beSigned(Bureaucrat& b) throw (GradeTooLowException);
 		
 	private:
-		const std::string		_name;
-		bool					_isSigned;
-		const int				_gradeSign;
-		const int				_gradeExec;
+		const std::string		_name; // constant name
+		bool					_isSigned; // boolean indicating whether a form is signed
+		const int				_gradeSign; // constant grade required to sign it
+		const int				_gradeExec; // constant grade required to execute it
 
+		// default constructor
+		Form(void);
 		// Copy assignment operator < private & undefined > to prevent reassignment,
 		// since _name is defined as 'const' and unchangeable; this way _name is immutable
 		Form& operator=(const Form &other);

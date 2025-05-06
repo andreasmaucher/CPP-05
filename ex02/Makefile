@@ -23,7 +23,7 @@ CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
 all: $(NAME)	
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 #rule for building .o files from .cpp files
 %.o: %.cpp

@@ -46,6 +46,7 @@ int Form::getGradeExec() const {return (_gradeExec);}
 
 // parameterized constructor
 // _isSigned "false",  indicating that the form is not signed when it is created
+// throwing exceptions directly in the constructor to avoid creating invalid objects
 Form::Form(std::string _name, int _gradeSign, int _gradeExec) throw (std::exception)
 	: _name(_name), _isSigned(false), _gradeSign(_gradeSign), _gradeExec(_gradeExec) {
 		if (_gradeSign > 150 || _gradeExec > 150)
@@ -53,6 +54,9 @@ Form::Form(std::string _name, int _gradeSign, int _gradeExec) throw (std::except
 		if (_gradeSign < 1 || _gradeExec < 1)
 			throw(GradeTooHighException());
 	}
+
+// default constructor
+Form::Form(void) : _name("Unknown"), _isSigned(false), _gradeSign(150), _gradeExec(150) {}
 
 // copy constructor
 // initializes the member variables of the new object with the values from the src object

@@ -11,16 +11,21 @@
 class ShrubberyCreationForm : public AForm
 {	
 	public:
+				// pure virtual function
 				void action() const;
-
+				// parameterized constructor
 				ShrubberyCreationForm(std::string target);
+				// copy constructor
 				ShrubberyCreationForm(const ShrubberyCreationForm& copy);
-				~ShrubberyCreationForm(void);
+				// destructor
+				virtual ~ShrubberyCreationForm(void);
 
 	private:
 				std::string _target;
 
+				// copy assignment operator
 				ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+				// default constructor
 				ShrubberyCreationForm(void);
 	
 };

@@ -16,7 +16,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
 {
 	if (this != &others)
 	{
-		this->_target = others._target;
+		//this->_target = others._target;
+		// no functionality, function can not be called since it's private
+		// best practice would be to but copy assignment operator '= delete' in .hpp, but
+		// not allowed until C++11
 	}
 	return *this;
 }
@@ -32,7 +35,7 @@ std::ostream &operator<<(std::ostream &o, RobotomyRequestForm const &i)
 // randomly value generator (either 0 or 1)
 void RobotomyRequestForm::action() const 
 {
-	std::srand(std::time(0)); // Seed the RNG with the current time
+	std::srand(std::time(0)); // Seed the RNG with the current time (could also be called in main for true randomness)
 	int randomValue = std::rand() % 2; // Generate random number (0 or 1)
 
 	std::cout << "drilling noises rrrrrrr...." << _target;

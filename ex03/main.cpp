@@ -22,10 +22,12 @@ After each deletion, you need to reset sampleForm to nullptr
 to prevent re-deleting an already deleted pointer.
 */
 
+// key functionality of the intern is the makeForm function
 int main(void)
 {
 	Intern jonny;
 	AForm	*sampleForm = NULL;
+	// valid robotomy request
 	try {
 		sampleForm = jonny.makeForm("robotomy request", "Bender");
 		std::cout << *sampleForm << std::endl;
@@ -36,6 +38,7 @@ int main(void)
 	delete sampleForm;
 	sampleForm = NULL;
 	std::cout << std::endl;
+	// valid shrubbery creation
 	try {
 		sampleForm = jonny.makeForm("shrubbery creation", "Bender");
 		std::cout << *sampleForm << std::endl;
@@ -46,6 +49,7 @@ int main(void)
 	delete sampleForm;
 	sampleForm = NULL;
 	std::cout << std::endl;
+	// valid presidential pardon
 	try {
 		sampleForm = jonny.makeForm("presidential pardon", "Bender");
 		std::cout << *sampleForm << std::endl;
@@ -56,13 +60,14 @@ int main(void)
 	delete sampleForm;
 	sampleForm = NULL;
 	std::cout << std::endl;
+	// invalid form name
 	try {
 		sampleForm = jonny.makeForm("president pardon", "Bender");
 	}
 	catch (std::exception& e) {
 		std::cout << "form4: " << e.what() << std::endl;
 	}
-	if (sampleForm)
+	if (sampleForm) // checks if sampleForm is not nullptr
 	{
 		delete sampleForm;	
 		sampleForm = NULL;

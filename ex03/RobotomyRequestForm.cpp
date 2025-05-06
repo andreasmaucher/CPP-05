@@ -16,7 +16,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
 {
 	if (this != &others)
 	{
-		this->_target = others._target;
+		//this->_target = others._target;
+		// no functionality, function can not be called since it's private
+		// best practice would be to but copy assignment operator '= delete' in .hpp, but
+		// not allowed until C++11
 	}
 	return *this;
 }

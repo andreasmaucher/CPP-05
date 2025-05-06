@@ -65,7 +65,9 @@ std::ostream &operator<<(std::ostream &o, AForm const &i)
 	return (o);
 }
 
-// execute function
+// execute function that allows a bureaucrat to execute a form
+// first check: verfiy whether the form is signed
+// second check: verifies if the bureaucrat has a high enough grade to execute form
 void AForm::execute(Bureaucrat const & executor) const
 		throw (GradeTooLowException, NotSignedException) {
 			if (!this->getSignStatus())
